@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 构造函数  原型
+
+    function User(name, password) {
+        this.name = name;
+        this.password = password;
+    }
+
+    User.prototype.showName = function() {
+        alert(this.name)
+    }
+    User.prototype.showPassword = function() {
+        alert(this.password);
+    }
+
+
+
+    function VipUser(name, password, level) {
+        User.call(this, name, password); // 偷梁换柱手法
+        this.level = level
+    }
+
+    // VipUser.prototype = new User();
+
+    // 拷贝继承
+    // VipUser.prototype = User.prototype;  //对象引用
+
+    // 深拷贝 浅拷贝
+    for (var k in User.prototype) {
+        VipUser.prototype[k] = User.prototype[k]
+    }
+    VipUser.prototype.showLevel = function() {
+        alert(this.level)
+    }
+
+
+
+
+    var vip1 = new VipUser("小花", 1234, 3)
+    var vip2 = new VipUser("小美", 5555, 5)
+
+    vip1.showName();
+    vip1.showLevel();
+</script>
+
+</html>

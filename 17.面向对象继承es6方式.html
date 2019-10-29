@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 构造函数  原型
+
+    // function User(name, password) {
+    //     this.name = name;
+    //     this.password = password;
+    // }
+
+    // User.prototype.showName = function() {
+    //     alert(this.name)
+    // }
+    // User.prototype.showPassword = function() {
+    //     alert(this.password);
+    // }
+
+
+
+    // function VipUser(name, password, level) {
+    //     User.call(this, name, password); // 偷梁换柱手法
+    //     this.level = level
+    // }
+
+    // // VipUser.prototype = new User();
+
+    // // 拷贝继承
+    // // VipUser.prototype = User.prototype;  //对象引用
+
+    // // 深拷贝 浅拷贝
+    // for (var k in User.prototype) {
+    //     VipUser.prototype[k] = User.prototype[k]
+    // }
+    // VipUser.prototype.showLevel = function() {
+    //     alert(this.level)
+    // }
+
+
+
+
+    // var vip1 = new VipUser("小花", 1234, 3)
+    // var vip2 = new VipUser("小美", 5555, 5)
+
+    // vip1.showName();
+    // vip1.showLevel();
+
+
+
+    class User {
+        constructor(name, pass) {
+            this.name = name;
+            this.pass = pass;
+        }
+        showName() {
+            alert(this.name)
+        }
+        showPass() {
+            alert(this.pass)
+        }
+    }
+
+    // 原来继承 推荐  call/apply借用继承 + 拷贝继承  
+
+
+    class VipUser extends User {
+        constructor(name, pass, level) {
+            super(name, pass);
+            this.level = level;
+        }
+
+        showLevel() {
+            alert(this.level)
+        }
+    }
+
+    var vip1 = new VipUser("小明", 12345, 4);
+
+    vip1.showName();
+    vip1.showPass();
+    vip1.showLevel();
+
+    // es6 封装的  底层还是会有原型  js: 不是真正面向对象的编程语言
+</script>
+
+</html>

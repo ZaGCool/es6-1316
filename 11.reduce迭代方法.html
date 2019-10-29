@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // reduce: 
+
+    let arr = [1, 2, 3, 4, 5, 6]; // 求和
+
+    let ret = arr.reduce(function(a, b, c) {
+        console.log(a, b, c); // 1  2  c:索引
+
+
+        return a + b; // 1+2 》 3  + 3 ==> 6 + 4 ==> 10 + 5 > 15 ==> 15+6 ==> 21
+
+    });
+
+    console.log(ret);
+
+    let arr2 = [1, 2, 3, 4, 5, 6];
+
+    let ret2 = arr2.reduce((a, b) => a - b);
+    console.log(ret2);
+
+
+
+    var arr3 = [14, 16, 7, 9, 12]; // 求和
+
+    // var sum = arr3.reduce((he, ele) => he + ele);
+
+    var avg = arr3.reduce((he, ele, i) => {
+        console.log(i);
+
+        if (i === arr3.length - 1) {
+            return (he + ele) / arr3.length
+        } else {
+            return he + ele
+        }
+
+
+    });
+
+    // console.log(sum);
+    // console.log(sum / arr3.length);
+    console.log(avg);
+</script>
+
+
+</html>

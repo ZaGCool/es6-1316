@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // class 保留字    className  es6 class关键字
+
+    class User {
+        constructor(name, password) {
+            this.name = name;
+            this.password = password;
+        }
+
+        showName() {
+            alert(this.name)
+        }
+
+        showPass() {
+            alert(this.password);
+        }
+
+    }
+
+    var user1 = new User("赵四", 12345);
+    var user2 = new User("王老", 56789);
+
+    user1.showName();
+
+    user2.showName();
+</script>
+
+</html>

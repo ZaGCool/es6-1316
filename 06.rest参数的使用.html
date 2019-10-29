@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // rest参数 剩余参数  ...
+
+    // 1 参数扩展 
+
+
+    function fun1(a, b, ...args) {
+        console.log(a);
+        console.log(b);
+
+        console.log(args); // [true, 'hello', 123]
+
+
+
+    }
+
+    fun1(3, 4, true, "hello", 123)
+
+    // 2 数组展开
+
+    var arr = [4, 7, 8];
+
+    function aaa(a, b, c) {
+        console.log(a, b, c);
+
+    }
+
+    aaa(...arr); // 数组展开
+
+    // 3  利用rest参数 可以实现 数组合并
+    var arr = ["hello", 1, 2, 3];
+    var arr2 = ["world", 12, 45];
+
+
+    // var newArr = arr.concat(arr2);
+    // console.log(newArr);
+
+    console.log([...arr, ...arr2]);
+
+    // let cc = ...arr;
+
+
+    // 函数的嵌套使用 rest参数来实现传参
+
+
+    let aa = (...args) => bb(...args);
+
+    let bb = (...args) => { // 求任意个数的和
+        let sum = 0;
+        for (var i = 0; i < args.length; i++) {
+            sum += args[i]
+        }
+        return sum;
+    }
+
+    console.log(aa(1, 3, 6));
+    console.log(aa(45, -6, 12, 9));
+</script>
+
+</html>

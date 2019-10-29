@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>这是第01个li</li>
+        <li>这是第02个li</li>
+        <li>这是第03个li</li>
+        <li>这是第04个li</li>
+        <li>这是第05个li</li>
+        <li>这是第06个li</li>
+        <li>这是第07个li</li>
+        <li>这是第08个li</li>
+        <li>这是第09个li</li>
+        <li>这是第10个li</li>
+    </ul>
+</body>
+<script>
+    // forEach: js es5扩展方法   jquery: $().each()  $.each()
+    // 本质上就是一个for循环的简化写法
+    let aLi = document.querySelectorAll('ul>li');
+    let colors = ["red", "blue", "orange", "green"];
+
+    aLi.forEach(function(ele, i) {
+        console.log(ele, i);
+
+        ele.style.backgroundColor = colors[i % colors.length];
+    });
+</script>
+
+</html>

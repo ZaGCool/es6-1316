@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // filter: 过滤  选出 内部返回true的结果  去掉内部返回false的结果
+
+    let arr1 = [2, 3, 14, 9, 15, 31, 8]; // [3,9,15]
+
+    // let newArr1 = arr1.filter(function(ele, i) {
+
+    //     if (ele % 3 == 0) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+
+    // });
+
+    let newArr1 = arr1.filter(ele => ele % 3 == 0 ? true : false);
+
+    console.log(newArr1);
+
+    let product = [{
+        name: "洗衣机",
+        price: 13000
+    }, {
+        name: "电视机",
+        price: 8000
+    }, {
+        name: "外星人alienware",
+        price: 28000
+    }, {
+        name: "兰博基尼鼠标",
+        price: 900
+    }];
+
+    //   [{
+    //   name:"洗衣机",
+    //   price: 13000
+    // }, {
+    //   name: "外星人alienware",
+    //   price: 28000
+    // }]
+    let newPro = product.filter(ele => ele.price > 10000 ? true : false);
+
+    console.log(newPro);
+</script>
+
+</html>

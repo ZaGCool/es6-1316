@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // map:  映射   一一对应    ajax 查询人员资料表   
+
+    // {
+    //   name: "姓名",
+    //   hobby: "爱好"
+
+
+    // }
+
+    // a: 13
+
+    // b: 35
+
+    // a: {name:"李四",age:23}
+    // b: {name:"王五",age:44}
+
+    // [56,78,92,36,67] 成绩分数 
+
+    // [不及格,及格，及格，不及格，及格]
+
+    // var arr = [1,2,3,4,5];  ===> [2,4,6,8,10]
+    var arr = [1, 2, 3, 4, 5];
+
+    // var newArr = arr.map(function(ele, i) {
+    //     // console.log(ele, i);
+
+    //     return ele * 2;
+
+    // });
+
+    let newArr = arr.map(ele => ele * 2);
+    console.log(newArr);
+
+    let score = [56, 78, 92, 36, 67]; // [不及格,及格，及格，不及格，及格]
+
+    // let newRet = score.map(function(ele) {
+    //     if (ele >= 60) {
+    //         return "及格"
+    //     } else {
+    //         return "不及格"
+    //     }
+    // });
+
+    let newRet = score.map(ele => ele >= 60 ? "及格" : "不及格");
+
+
+
+    console.log(newRet);
+</script>
+
+</html>

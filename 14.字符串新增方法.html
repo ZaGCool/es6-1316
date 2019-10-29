@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // es6  有很多方法 都是语法糖  给我们提供了一些 语法层面 非常好用简便的方法
+    // 
+    let str222 = 'helloworld';
+
+    console.log(str222.includes("z")); // 
+
+
+    // 什么协议 http  https  git   file://
+    // var str1 = "http://www.baidu.com";
+    // var str2 = "https://www.163.com";
+    // var str3 = "git://aaabc@github.com";
+    // var str4 = "file://c/aa/bb/cc.html";
+
+    // let detectStr = (str) => {
+    //     if (str.startsWith("http://")) {
+    //         alert('这是http协议')
+    //     } else if (str.startsWith("https://")) {
+    //         alert('这是https协议')
+    //     } else if (str.startsWith("git://")) {
+    //         alert('这是git协议')
+    //     } else if (str.startsWith("file://")) {
+    //         alert('这是file协议')
+    //     }
+
+    // }
+
+    // detectStr(str1);
+    // detectStr(str2);
+    // detectStr(str3);
+    // detectStr(str4);
+
+    // endsWith()
+
+    // 判断图片是什么类型
+    // var str1 = "aa.jpg";
+    // var str2 = "abc.jpg.gif";
+    // var str3 = "ccc.aa.png";
+    // var str4 = "abc.bmp";
+
+    // let detectStr = (str) => {
+    //     if (str.endsWith("png")) {
+    //         alert('这是png图片')
+    //     } else if (str.endsWith("jpg")) {
+    //         alert('这是jpg图片')
+    //     } else if (str.endsWith("bmp")) {
+    //         alert('这是bmp图片')
+    //     } else if (str.endsWith("gif")) {
+    //         alert('这是gif图片')
+    //     }
+
+    // }
+
+    // detectStr(str1);
+    // detectStr(str2);
+    // detectStr(str3);
+    // detectStr(str4);
+
+
+    var str6 = "hello"; // "hellohellohellohello..."
+
+    console.log(str6.repeat(6));
+
+    // 模版字符串
+    var aaa = "前端"
+    var result = `我是
+    一个${aaa}开
+    发
+    者`;
+
+    alert(result);
+</script>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 解构  解开结构  赋值
+
+    // var arr = [14, 23, 71];
+
+    // var a = arr[0];
+    // var b = arr[1];
+    // var c = arr[2];
+
+    // console.log(a, b, c);
+
+
+
+
+    // let [a, b, c] = [14, 23, 71];
+
+    // console.log(a, b, c);
+
+    // 交换两个变量   
+
+    // var a =10;
+    // var b = 15;
+
+    // var temp = a;
+    // a = b;
+    // b = temp;
+
+    var a = 10;
+    var b = 15;
+
+    var [b, a] = [a, b];
+    console.log(a);
+    console.log(b);
+
+    // var obj = {
+    //     name: "赵四",
+    //     age: 44,
+    //     job: "actor",
+    //     hobby: "二人转"
+    // }
+
+    // var {
+
+    //     name,
+    //     hobby
+
+
+    // } = {
+    //     name: "赵四",
+    //     age: 44,
+    //     job: "actor",
+    //     hobby: "二人转"
+    // }
+
+    // // console.log('我的名字叫' + obj.name);
+
+    // console.log(name);
+    // console.log(hobby);
+
+
+    // let [{
+    //         age,
+    //         name
+    //     },
+    //     [color1, color2, color3], num1, str1, num2
+    // ] = [{
+    //         name: "小花",
+    //         age: 25
+    //     },
+    //     ["red", "green", "blue"], 123, "hello", 36
+    // ]
+
+    // console.log(age, name);
+    // console.log(color2);
+
+    // console.log(num1);
+    // console.log(str1);
+    // console.log(num2);
+
+    // 控制解构粒度
+
+
+    let [obj,
+        arr, num1, str1, num2
+    ] = [{
+            name: "小花",
+            age: 25
+        },
+        ["red", "green", "blue"], 123, "hello", 36
+    ]
+
+    console.log(obj, arr);
+
+
+
+
+    let {
+        a,
+        b
+    } = {
+        a: 13,
+        b: 24
+    }
+</script>
+
+</html>
