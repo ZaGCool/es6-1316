@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    onload = () => {
+        let oBox = document.querySelector('#box');
+        console.log(oBox);
+
+    };
+</script>
+
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    // window.onload = function(){
+
+    // }
+
+    var show1 = (a, b) => a * b;
+
+    alert(show1(3, 5));
+
+    var fun1 = (a, b) => [1, a, b, 7];
+
+    console.log(fun1(3, 5));
+
+    // var fun2 = ()=>{
+    //   return {a:2,b:4}
+    // }
+
+    var fun2 = () => ({
+        a: 2,
+        b: 4
+    });
+
+    console.log(fun2());
+
+
+    var arr = [4, 3, 1, 6, 88, 34, 28];
+
+    // arr.sort(function(a, b) {
+    //     return a - b
+    // });
+
+    arr.sort((a, b) => b - a);
+
+    console.log(arr);
+
+
+    // 箭头函数 内部没有this  内部this指向父级作用域
+    // 箭头函数不能用于构造函数
+</script>
+
+</html>
